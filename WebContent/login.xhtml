@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+	<h:body>
+		<ui:composition template="resources/templates/template.xhtml">
+			<ui:define name="content">	
+			<p:messages style="display:block; margin: 0 auto; width:60%" id="error"/>
+				<div class="logwrapper">
+					<div class="title">
+						<h1 class="s-titleText loginTitle" >Log In</h1>
+					</div>
+					<div class="loginCtrl">
+					<h:form>
+						<h:panelGrid styleClass="loginInput" columns="2">
+							<h:outputLabel for="username" value="Username:" />
+							<p:inputText styleClass="s-username" name="username" label="username" id="username" validator="#{LoginValidator.validateUsername}" value="#{LoginController.username}" required="true" />
+							<h:outputLabel for="password" value="Password:" />
+							<p:password styleClass="s-password" id="password" label="password" validator="#{LoginValidator.validatePassword}" value="#{LoginController.password}" required="true" />
+						</h:panelGrid>
+					<div class="loginBtn">
+						<!-- LoginController.login in action method below later -->
+						<p:commandButton styleClass="s-btnLogin logButton" value="Login" action="#{LoginController.login}" update="error"/>
+					</div>	
+					</h:form>
+					</div>
+				</div>
+			</ui:define>
+		</ui:composition>
+	</h:body>
+</html>

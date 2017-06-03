@@ -1,0 +1,1089 @@
+/*@CHARSET "ISO-8859-1";*/
+/* html selectors styling */
+* {
+	margin:0;
+	padding:0;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+	background-color: #f2f2f2;
+	font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
+    color: #363636;
+}
+
+body {
+	height: 100%;
+	background-color: white;
+	margin: 0;
+}
+
+/* end of html selector styles */
+
+#nav {
+	width: 100%;
+	height: 10%;
+	background-color: #bfbfbf;
+}
+
+/* this is the wrapper for the whole site 
+   location: template.xhtml */
+.container {
+ 	display: flex;
+ 	width: 100%;
+    overflow: hidden;
+    flex-flow: column wrap;
+    min-height: 100%;
+}
+
+.content {
+	margin: auto;
+	flex: 1;
+}
+
+/* styles for the HEADER BANNER 
+   .head - located template.xhtml */
+.head {
+	background: #F5F5F5;
+	border-radius: 0;
+	border: 0;
+	margin-top:0;
+	margin-bottom:0;
+	padding:0;
+	overflow:hidden;
+}
+
+
+/*.headLogo located on index.xhtml */
+.headLogo {
+	background: #F5F5F5;
+	display: flex;
+	margin: auto;
+	justify-content: center;
+	padding: 2vh;
+}
+
+/* .headText located index.xhtml */
+.headText {
+	display:flex;
+	flex-direction: column;
+	padding-top:5vh;
+	margin-left: 5vh;
+}
+
+.headText h1 {
+	font-size: 2em;
+}
+
+.headText h3 {
+	font-size: 1em;
+}
+
+/* header logo size */
+.logo {
+	height: 20vh;
+}
+
+.bakedgoods {
+	padding-top: 7vh;
+	margin: auto;
+}
+
+
+.pastries {
+	height: 25vh;
+	width: 40vh;
+}
+
+
+/* end of head banner styles */
+
+/* Main content part Login Page styles 
+   .mainContent located in template.xhtml */
+.mainContent {
+	background: #F5F5F5;
+	border-radius: 0;
+	border: 0;
+	margin-top:0;
+	margin-bottom:0;
+	padding:0;
+	overflow:hidden;
+	
+}
+
+/* title of page - index.xhtml */
+.title {
+	text-align:center;
+ 	margin-top: 5vh;
+	margin-bottom: 3vh;
+	font-size: 1.5em;
+/* 	background: purple;
+ */}
+
+.loginTitle {
+	text-align:left;
+}
+
+.title hr {
+	width: 15%;
+	border: 3px solid #363636;
+	color: #363636;
+}
+
+.logwrapper {
+	width: 100%;
+	margin:auto;	
+}
+
+/* login form controls - index.xhtml */
+.loginCtrl {
+	display:flex;
+	justify-content:center;
+}
+
+/* Login input console styles - index.xhtml */
+.loginInput {
+ 	border: 3px #363636 solid;
+	padding: 5vh;
+	border-radius: 2vh;
+	-webkit-box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+	-moz-box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+	box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+}
+
+.loginInput label {
+	font-weight: bold;
+}
+
+/* the div that holds the login button - index.xhtml */
+.loginBtn {
+ 	float:right;
+ 	margin-top: 3vh;
+	margin-bottom: 3vh;
+/*  	background: red;
+ */}
+
+.loginBtn2 {
+	float: right;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+	/* background:fuchsia */;
+}
+
+
+/*Login button itself - index.xhtml */
+.logButton {
+	background: #363636 !important; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#363636, #4A4A4A) !important; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#363636, #4A4A4A) !important; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#363636, #4A4A4A) !important; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#363636, #4A4A4A) !important; /* Standard syntax */
+	padding-left: 2vh;
+	padding-right: 2vh;
+	border: 2px  #363636 solid !important;
+	-webkit-box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+	-moz-box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+	box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+}
+
+.logButton:hover {
+	background:#363636 !important;
+	border: 2px while solid !important;
+	color: white !important;
+}
+
+
+/* FOOTER BAR styles here 
+   footerBar located in footer.xhtml template file */
+
+/*footer located in footer.xhtml */
+.footer {
+	background: #F5F5F5;
+	display:flex;	
+	padding-bottom: 3vh;
+	padding-top: 3vh;
+	
+}
+
+/*leftFoot located in footer.xhtml
+  this controls the left text block in footer */
+.leftFoot {
+	justify-content:left;
+	margin:auto;
+}
+
+/* rightFoot located in footer.xhtml 
+   right foot controls the right text block in footer*/
+.rightFoot {
+	justify-content: right;
+	margin: auto;
+	font-size: .75em !important;
+}
+/* controls main text for footer */
+.footInfo {
+	font-size: .75em !important;
+	font-weight:bold;
+}
+/*controls the text for the copyright statement in footer*/
+.footCopy {
+	font-size: .75em !important;
+}
+
+/* styles text in the footer for contact admin button */
+.contactUsLink {
+	font-size: .5em !important;
+	color: blue !important;
+	text-decoration: none;
+}
+
+/* End of the footer banner styles */
+
+
+/*Menubar/nav bar styles start here 
+ menubar is located in header.xhtml */
+.ui-menubar,.ui-menu-child,.ui-menu {
+ 	margin-left: 5vh;
+	margin-top:7vh;
+	background: #F5F5F5;
+	border:none;
+}
+
+/*menu bar styles end here */
+
+/* home content styles start here 
+	located - home.xhtml */
+.homeContent {
+	margin:auto;
+	width: 50%;
+	text-align:center;
+/* 	background:red; 
+ */}	
+
+/*create project styles start here */
+/* create project panel projcreation.xhtml */ 
+
+.projCtrl {
+	margin:auto;
+	width: 50%;
+}
+
+.panel {
+	margin-left:auto;
+	margin-right: auto;
+	margin-top: 2%;
+	width: 100%;
+	background: #dfdfdf;
+	padding: 5% 5% 5% 5%;
+	border-radius: 10px;
+	border: 2px solid #4f4f4f;
+	-webkit-box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+	-moz-box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+	box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+}
+
+/* the labels fro the inputs */
+.projLabel {
+	display:block;
+	text-align: left;
+	
+}
+
+/* the inputs for the create project page*/
+.projInput {
+	margin-top:1%;
+	margin-bottom:1%;
+}
+
+/* the dropdown box for creat project*/
+.drop {
+	display:block;
+ 	text-align: left;
+}
+
+/*the button for the create project page*/
+.projBtn {
+	 margin-top:1%;
+	 background: #dfdfdf !important;
+	 padding: .5% 1% .5% 1%;
+	 border:2px solid #4f4f4f !important;
+	 margin-left: 16.5%;
+	 -webkit-box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+	 -moz-box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+	 box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+}
+
+/* create project styles end here */
+
+/* timesheet styles start here */
+/*This for the sub header on the timesheetpage 
+  holds info for hte selected timesheet - timesheet.xhtml*/
+.tsWrapper {
+	width:80%;
+	margin:auto;
+}
+
+.tsPanels {
+	border: none !Important;
+}
+
+.btnCenter {
+	text-align: center;
+}
+
+.tsInput {
+	width: 70%;
+}
+
+.tsNotes {
+	width:80%;
+}
+
+.flexInput {
+	width:30%;
+}
+
+#timesheetHead {
+	display: flex;
+	flex-flow: row wrap;
+	background: #dfdfdf;
+	border-radius: 10px;
+	width: 60%;
+	padding: 1% 2% 1% 2%;
+	margin:auto;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	border: 2px solid #4f4f4f;
+	-webkit-box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+	-moz-box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+	box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+}
+
+/* sub div box that holds some sub head info */
+#timesheetSubOne {
+	margin: 1%;
+	flex-grow:1;
+}
+
+/* sub div box that holds some sub head info */
+#timesheetSubTwo {
+	margin: 1%;
+	flex-grow:1;
+}
+
+.createTsModelBtn {
+	float:right;
+}
+
+/* styles the dropdown box */
+.tsDrop {
+	margin-bottom: 1%;
+	margin-top: 1%;
+}
+/* main context area of timesheet.xhtml */
+.tsCont {
+	width: 85%;
+	margin:auto;
+/* 	background: yellow;
+ */}
+
+/* button for deleting a row in a timesheet */
+
+/* the curve on the timesheet table */
+/* note - this affects all data tables in the site */
+.ui-datatable-tablewrapper {
+	border-radius: 30px ;
+}
+
+/* this styles the header of the data table timesheet.xhtml */
+.tsHeader {
+	border: 2px solid white !important;
+}
+
+/* styles the timesheet rows in alternating colors */
+.ui-datatable-odd {
+	background: #eeeeee !Important;
+}
+
+/* the subtotals panes in timesheet.xhtml*/
+.subtotals {
+	display:flex;
+	flex-flow: row wrap;
+	width: 60%;	
+}
+
+/* timesheet status bar sub div */
+.status {
+	float: right;
+	margin-left: 10%;
+}
+
+/* group of buttons at the bottom of timesheet page*/
+.btnGrp {
+	display: flex;
+	flex-direction: row;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+/* sub group of buttons at bottom of timesheet.xhtml */
+.btnGrp button {
+	background: #363636 !important; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#363636, #4A4A4A) !important; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#363636, #4A4A4A) !important; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#363636, #4A4A4A) !important; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#363636, #4A4A4A) !important; /* Standard syntax */
+	border: 2px solid #4f4f4f !important;
+	padding: 0 2% 0 2%;
+}
+
+
+/* sub group 2 of buttons at bottom of timesheet.xhtml */
+.btnGrpTwo {
+	float: right;
+}
+
+/* modal styles for creating a new timesheet - timesheet.xhtml*/
+.modalText {
+	margin:1% 0% 2% 0%;
+}
+
+/* modal button to create timesheet - timesheet.xhtml */
+.modalBtn {
+	background: #dfdfdf !important;
+	border: 2px solid #4f4f4f !important;
+	padding-top:1%;
+	padding-bottom: 1%;
+	margin-top: 2%;
+	cursor: pointer;
+	float:right;
+}
+
+/* psuedo classing hover for modal button */
+.modalBtn:hover {
+	 -webkit-box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+	 -moz-box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+	 box-shadow: 10px 10px 32px -14px rgba(58,58,58,1);
+}
+/* end of timesheet.xhtml styles */
+
+/* start of Human Resources page styles - humanresources.xhtml */
+/* gives space on top of the title. 
+   most of the styles for the title comes from .pageTitle class
+   this empTitle is just for spacing */
+.empTitle {
+	margin-top: 2%;	
+}
+
+/*most styles come from tsCont class 
+  this is just for individual spacing on this page */
+.hrCont {
+	margin-top: 2%;
+	width: 55%;
+}
+
+/* styles the command link in the HR emp table. */
+.editBtn {
+	text-decoration:none;
+	color:blue !important;
+}
+
+/*psuedo classing for the edit link in the hr emp table */
+.editBtn:hover {
+	color: #4f4f4f !Important;
+}
+
+/* styles for button div to add new employee */
+.empBtn {
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+/* styles for the button to add new employee */
+.empBtn button {
+	background: #dfdfdf !important;
+	border: 2px solid #4f4f4f !important;
+	padding: 0 2% 0 2%;
+	float:right;
+}
+
+.hrPanel {
+	width: 90%;
+}
+
+.hrBtn {
+	margin-right: 10%;
+	margin-bottom: 3%;
+	margin-top: 3%;
+}
+
+/* note, a lot of the styles on this page come from other 
+class for other pages like the ts class from the timesheet page */
+/* end of human resources page styles */
+
+/* addemployee.xhtml styles start here */
+/* **note a lot of the styles for this page were taken from 
+   projcreation.xhtml - mainly for the panel grid. and some taken from 
+   home page styles** */
+/* addEmpCont just gives some space for the header/content 
+   sections to breathe */
+.addEmpCont {
+	margin-top: 1%;
+	margin-bottom: 1%; 
+}
+
+.addEmpDrop {
+	width:100%;
+}
+
+/* Styles the drop down box in the addemployee.xhtml */
+.addEmpDrop {
+	font-size: .75em !important;
+	display:block;
+	width: 40% !important;
+}
+
+/* styles the buttons div in addemployee.xhtml */
+.addEmpBtn {
+	margin:auto;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	width: 31%;
+	text-align:right;
+}
+
+/* styles the buttons in addemployee.xhtml */
+.addEmpBtn button {
+	background: #dfdfdf !important;
+	border: 2px solid #4f4f4f !important;
+	padding: 0 2% 0 2%;
+}
+/* addemployee.xhtml styles end here. */
+
+/* editemployee.xhtml styles start here */
+/* **note a lot of the styles for this page were taken from 
+   projcreation.xhtml - mainly for the panel grid. and some taken from 
+   home page styles** */
+ /* editEmpTitle spaces and centers the title */
+ 
+.editEmpWrapper {
+/* 	background:yellow;
+ */	width: 70%;
+	margin:auto;
+}
+
+.editEmpPanelWrap {
+	margin:auto;
+	width: 40%;
+}
+ 
+.editEmpTitle {
+	margin-top: 1%;
+	margin-bottom: 1%;
+	text-align:center;
+}
+
+/*Styles the button group for editemployee.xhtml */
+.editEmpBtnGrp {
+	margin:auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	width: 28%;
+	text-align: right;
+}
+
+/* styles the buttons themselves for editemployee.xhtml */
+.editEmpBtnGrp button {
+	background: #dfdfdf !important;
+	border: 2px solid #4f4f4f !important;
+	padding: 0 1% 0 1%;	
+}
+
+.proCtrl {
+	width: 70%;
+}
+/* ** NOTE ** - the modal is being styles via the modal 
+	styles that are above. furthermore, the page itself is getting 
+	styles from projcreation.xhtml styles. */
+/* end of editemployee.xhtml styles */
+
+/*====================================*/
+
+/* Start of styles for assignemp.xhtml 
+   This is to assign employees to projects 
+   **Note** some styles are taken from other 
+   pages to try and minimize repeating styles. */
+
+.assignEmpWrapper {
+	margin:auto;
+	width: 70%;
+	text-align:center;
+	/* background:red */;
+}
+
+
+/* assignEmpCont - is to adjust the content div */
+.assignEmpCont {
+	margin-top: 2%;
+}
+
+.widgetCont {
+	display: flex;
+	flex-flow: row wrap;		
+}
+
+
+/* asgnProjTbl for the data table sizing and positioning */
+.asgnProjTbl {
+	width: 51%;
+	flex-grow:2;
+	padding: 2%;
+	
+	/* background:blue;  */
+}
+
+.asgnEmpPick {
+	width:40%;
+	flex-grow:1;
+	padding: 2%;
+/*  	background:green;
+ */}
+
+h2.mngEmpProjSubHead {
+	text-align: left;
+	margin: 2%;
+}
+
+.asgnBtn {
+	display:flex;
+	flex-flow: row wrap;
+}
+
+
+
+/* End of styles for assignemp.xhtml.*/
+
+/* Styles for projectplanning.xhtml start here */
+
+.projPlanWrapper {
+	margin:auto;
+	width: 55%;
+}
+
+.projPlanHead {
+	width: 47%;
+	margin-bottom: 3%;
+}
+
+.projPlanTbl {
+	margin:auto;
+	width: 90%;
+}
+
+.projPlanBtn {
+	margin-top: 3%;
+	margin-right: 10%;
+	
+}
+.align {
+	text-align: right;
+}
+
+.projPlanInput {
+	width: 80%;
+}
+
+..ui-widget-content {
+	border: none !important;
+	margin-bottom: 5%;
+}
+
+.projPanel {
+	border: none !important;
+	margin-bottom: 8%;
+}
+
+/* styles for projectplanning.xhtml end here */
+
+/* styles for assign employees to wp start here 
+   assigntowp.xhtml */
+.asgnWPEmp {
+	margin:auto;
+	width: 70%;
+	text-align:center;
+	/* background:red */;
+}
+
+.asgnEmpWpCont {
+	margin:auto;
+	width: 90%;
+	
+}
+
+.asgnEmpDropDwn {
+	text-align: left;
+	margin-left: 3%;
+}
+/* styles for assigntowp.xhtml end here */
+
+/* styles for  */
+
+/* styles for workpackagebudgetre.xhtml start here
+   these styles are for estimating the work package budget */
+   
+.estWpWrapper {
+	margin: auto;
+	width: 70%;
+}
+
+.budgetWrap {
+	width: 90%;
+	margin: auto;
+	margin-bottom: 7%;
+	margin-top: 5%;
+}
+
+.estWpSubHead {
+	text-align: left;
+	margin-bottom: 2%;
+}
+
+.wpbdreBtn {
+	text-align:center;
+}
+
+.weekDaysTwo {
+	width: 7%;	
+}
+
+.panelPad {
+	padding: 4% 1% 4% 1%;
+}
+
+/* end of workpackagebudgetre.xhtml */
+
+/* Styles for monthlyreport.xhtml start here. */
+.monReportWrapper {
+	margin: auto;
+	width: 65%;
+}
+
+.monReportPanel {
+	border: none !important;
+	margin-bottom: 8%;
+	padding-bottom: 3%;
+}
+
+.wpElementWrap {
+	width: 90%;
+	margin:auto;
+}
+
+/* Styles for monthlyreport.xhtml end here. */
+
+/* Styles for budgetwp.xhtml start here */
+
+.wpCreationWrapper {
+	margin: auto;
+	width: 75%;
+}
+
+.budgetWpPanel{	
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.reportSubhead {
+	margin: 2% 2% 2% 0%;	
+}
+
+.monReportTbl {
+	width:94%;
+	margin:auto;
+	margin-bottom: 3%;
+}
+
+.weekDays {
+	width: 7%;
+}
+
+.tblDecrip {
+	width: 10%;
+}
+
+.manDaysInput {
+	width: 100%;	
+}
+
+.tblBtnCenter {
+	margin:auto;
+	text-align:center;
+}
+
+.pendingTblSize {
+	width: 50%;
+}
+
+/* Styles for budgetwp.xhtml end here. */
+
+/* start of styles for assignemptotsa.xhtml. */
+.tsaSpacing {
+	margin-top: 3%;
+}
+
+.assignEmpBtn {
+	background:gray;
+	float: left;
+	margin-top:3%;
+}
+
+/*end of styles for assinemptotsa.xhtml. */
+
+/* styles for rereport.xhtml start here. */
+.rereportWrapper {
+	margin:auto;
+	width: 90%;
+}
+
+.reportWrapper {
+	width:85%; 
+	margin:auto;
+	display: flex;
+	flex-flow: row wrap;
+	margin-top: 5%;
+		
+}
+
+.infoWrapper {
+	margin-top: 5%;
+	margin-bottom: 5%;
+/* 	margin-right: 2%; */
+	width: 33%;
+}
+
+.reportTblWrapper {
+	width:65%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+ 	margin-left: 2%;
+}
+
+.reportText {
+	font-size: 1.3em;
+ 	padding-bottom: 2%;
+}
+
+.reportPanel {
+/* 	border:2px solid black !important;
+ */}
+.reportPanel table, td, tr {
+	border:none !important;
+/* 	padding:3% !important;
+ */}
+
+/* Styles for rereport.xhtml end here. */
+
+/* Styles for vacationflextime.xhtml start here. */
+.profileWrapper {
+	width: 50%;
+	margin: auto;
+}
+
+.personInfoWrap {
+	width: 50%;
+	margin:auto;
+	padding: 3%;
+}
+
+.profPanel {
+	margin:auto;
+}
+/* Styles for vacationflextime.xhtml end here.*/
+
+/* Styles for report.xhtml start here */
+
+.tsaPgWrapper {
+	margin:auto;
+	width: 100%;
+}
+
+.tsaTitle {
+	margin-left: 5%;
+}
+
+.listWrapper {
+	display:flex;
+	flex-direction: row;
+}
+
+.tsaTable {
+	width: 90%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+
+.tsaTableTwo {
+	width: 100%;
+	padding-top: 3%;
+	padding-bottom: 3%:
+}
+
+.tsaWidth {
+	width: 7%;
+}
+
+.hoursWidth {
+	width: 14%;
+}
+
+.statusWidth {
+	width: 11%;
+}
+
+
+/* styles for report.xhtml end here */
+ 
+/* Styles for estimatewpeffort.xhtml start here */ 
+
+.estimateWrapper {
+	margin: auto;
+	width: 60%;
+}
+
+.estwpWidth {
+	margin:auto;
+	width: 60%;
+}
+
+.gridHeadText {
+	font-size: 1.3em;
+	font-weight: bold;
+	padding-top:2%;
+	margin-bottom: 5%;
+
+}
+
+.ada{ 
+	padding: 5%; 
+}
+
+
+
+/* Styles for estimatewpeffort.xhtml end here */
+ 
+/*Styles for home.xhtml start here.*/ 
+ 
+.homeWrapper {
+	margin: auto;
+	width: 80%;
+	display:flex;
+	flex-direction: column;
+}
+
+.dashWrapper {
+	margin: auto;
+	width: 80%;
+	margin-bottom: 25px;
+}
+
+ 
+.flexWrap {
+	padding: 0;
+	margin:auto;
+   	margin: 0;
+ 	list-style: none;
+
+  	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+  
+  	-webkit-flex-flow: row wrap;
+ 	justify-content: center;
+} 
+
+.dashElement {
+	margin-bottom:20px;
+	margin-top:10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 350px;
+	height: 75px;
+	background:#f9f9f9;
+	padding:30px 30px 30px 30px;
+	text-align:center; 
+	border: 3px solid #333f4f; 		
+	border-radius: 25px;
+	-webkit-box-shadow: 10px 10px 30px -11px rgba(51,63,79,1);
+	-moz-box-shadow: 10px 10px 30px -11px rgba(51,63,79,1);
+	box-shadow: 10px 10px 30px -11px rgba(51,63,79,1);
+}
+
+.dashElement:hover {
+	background: #687486;
+	color:#f9f9f9; 
+}
+
+
+.dashLinks {
+	text-decoration:none;
+	color:#333f4f !important;
+}
+
+.dashIcon {
+	width: 70px;
+	float:left;
+}
+
+.dashText {
+	font-size: 1.8em;
+}
+
+.dashSubHead {
+	margin-bottom: 3%;
+	color: #333f4f;
+	font-size: 1.5em;
+}
+
+ 
+/*Styles for home.xhtml end here. */ 
+ 
+.headerPart {
+	display: inline;
+	float: left;
+	margin-right: 2%;
+}
+
+.headerPart p {
+	display: inline;
+}
+
+form {
+	clear: left;
+}
+
+#approverForm {
+	width: 50%;
+	margin: auto;
+}
+
+#approveTable {
+	border-spacing: 1%;
+}
+
+#projectplanning {
+	border: none !important;
+		
+}
+
+/*don't delete this */
+.ui-layout-unit.ui-widget.ui-widget-content.ui-corner-all.ui-layout-center.mainContent.ui-layout-pane.ui-layout-pane-center {
+	z-index: auto !important; /* I'm sorry */
+}
+
+a {
+font-size: 1.1em;
+font-family: Helvetica !important;
+}
