@@ -99,8 +99,9 @@ CREATE TABLE products_categories (
   PRIMARY KEY (prod_cat_id),
   Foreign key (product_id) references products(product_id), 
   Foreign key (category_id) references categories(category_id),
-  UNIQUE KEY prod_cat_id_UNIQUE (prod_cat_id),
-  UNIQUE prod_cat (product_id, category_id)
+  UNIQUE prod_cat (product_id, category_id),
+  UNIQUE KEY prod_cat_id_UNIQUE (prod_cat_id)
+  
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

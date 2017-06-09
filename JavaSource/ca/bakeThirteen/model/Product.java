@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Products")
+@Table(name="products")
 public class Product implements Serializable {
 
 private static final long serialVersionUID = 1L;
@@ -27,6 +27,7 @@ private static final long serialVersionUID = 1L;
     @Column(name="product_price", precision=2, scale=11)
     private BigDecimal product_price;
 
+    
     public Product() {
     }
 
