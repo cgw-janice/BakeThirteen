@@ -20,7 +20,7 @@ import ca.bakeThirteen.model.*;
 @Dependent
 @Stateless
 public class CategoryManager implements Serializable {
-    @PersistenceContext(unitName="inventory-jpa") EntityManager em;
+    @PersistenceContext(unitName="bakeThirteen-persistence-unit") EntityManager em;
 
     /**
      * Find Category record from database.

@@ -25,6 +25,7 @@ USE bakeThirteen_dev;
 --
 -- Dumping data for table catagories
 --
+
 DROP TABLE IF EXISTS categories;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -53,7 +54,7 @@ INSERT INTO categories (category_name) VALUES
 	('Others');
 
 --
--- Dumping data for table catagories
+-- Dumping data for table products
 --
 DROP TABLE IF EXISTS products;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -76,4 +77,34 @@ CREATE TABLE products (
 
 INSERT INTO products (product_name, product_description, product_price) VALUES
     ('Banana Bread', 'Delicious!', 5.00),
+	('Breakfast Cookie', 'Delicious!', 5.00),
 	('Churros', 'Cinnamon Sugar!', 7.00);
+	
+
+--
+-- Dumping data for table product_categories
+--
+DROP TABLE IF EXISTS products_categories;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;	
+	
+--
+-- Table structure for table products_categories
+-- This is associative table for product and categories
+--
+CREATE TABLE products_categories (
+  prod_cat_id INT(11) NOT NULL AUTO_INCREMENT,
+  product_id INT(11) NOT NULL,
+  category_id INT(11) NOT NULL,
+  PRIMARY KEY (prod_cat_id),
+  Foreign key (product_id) references products(product_id), 
+  Foreign key (category_id) references categories(category_id),
+  UNIQUE KEY prod_cat_id_UNIQUE (prod_cat_id),
+  UNIQUE prod_cat (product_id, category_id)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+INSERT INTO products_categories (product_id, category_id) VALUES
+    (1,6),
+	(1,7),
+	(2,3);
