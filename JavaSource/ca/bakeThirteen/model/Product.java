@@ -1,9 +1,16 @@
 package ca.bakeThirteen.model;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
+import java.io.Serializable;
+import java.math.BigDecimal;
 
-public class Product {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Products")
+public class Product implements Serializable {
 
 private static final long serialVersionUID = 1L;
     
@@ -17,13 +24,13 @@ private static final long serialVersionUID = 1L;
     @Column(name="product_description")
     private String product_description;
     
-    @Column(name="product_price")
-    private String product_price;
+    @Column(name="product_price", precision=2, scale=11)
+    private BigDecimal product_price;
 
     public Product() {
     }
 
-    public Product(int product_id, String product_name, String product_description, String product_price) {
+    public Product(int product_id, String product_name, String product_description, BigDecimal product_price) {
         this.product_id = product_id;
         this.product_name = product_name;
         this.product_description = product_description;
@@ -75,14 +82,14 @@ private static final long serialVersionUID = 1L;
     /**
      * @return the product_price
      */
-    public String getProduct_price() {
+    public BigDecimal getProduct_price() {
         return product_price;
     }
 
     /**
      * @param product_price the product_price to set
      */
-    public void setProduct_price(String product_price) {
+    public void setProduct_price(BigDecimal product_price) {
         this.product_price = product_price;
     }
     

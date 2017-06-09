@@ -13,7 +13,7 @@ import ca.bakeThirteen.model.*;
 /**
  * Handle CRUD actions for Category class.
  * 
- * @author blink
+ * @author Janice Chan
  * @version 1.0
  * 
  */

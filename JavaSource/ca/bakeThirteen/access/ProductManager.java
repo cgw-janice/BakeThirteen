@@ -13,7 +13,7 @@ import ca.bakeThirteen.model.*;
 /**
  * Handle CRUD actions for Product class.
  * 
- * @author blink
+ * @author Janice Chan
  * @version 1.0
  * 
  */
@@ -47,7 +47,7 @@ public class ProductManager implements Serializable {
      * merge Product record fields into existing database record.
      * 
      * @param product
-     *            the record to be merged.
+     * the record to be merged. 
      */
     public void merge(Product product) {
         em.merge(product);

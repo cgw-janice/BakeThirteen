@@ -54,8 +54,8 @@
         				</c:forEach>
         				</p:submenu>
         				<p:submenu id="recipesMenu" label="Recipes">
-						<c:forEach items="#{selectedCategory.categoryItems}" var="c">
-            				<p:menuitem value="#{c.category_name}" update="recipesMenu">
+						<c:forEach items="#{selectedCategory.categoryItems}" var="p">
+            				<p:menuitem value="#{p.category_name}" update="recipesMenu">
                 		<f:setPropertyActionListener target="" value="" />
             			</p:menuitem>
         				</c:forEach>
