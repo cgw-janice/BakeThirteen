@@ -3,7 +3,8 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
 
 	<body>
 		<ui:composition>
@@ -18,18 +19,19 @@
 					<h1>Bake Thirteen</h1>
 					<h3>Recipe Management System</h3>		
 				</div>
-				
-				<h:form>
+									  	
+					<!-- 
 					<p:menubar styleClass="menubar">
+					
 						<p:menuitem value="Home" url="home.xhtml" />
 						<p:submenu styleClass="s-catalogMenu" label="Catalog" >
-							<p:menuitem styleClass="s-timesheet" value="Cakes" url="" />
+							<p:menuitem styleClass="s-catagories" value="Cakes" url="" />
 							<p:menuitem value="Donuts" url="" />
 							<p:menuitem value="Cupakes" url="" />
 							<p:menuitem value="Muffins" url="" />
 						</p:submenu>
 						<p:submenu styleClass="s-recipesMenu" label="Recipes" >
-							<p:menuitem styleClass="s-timesheet" value="Cakes" url="" />
+							<p:menuitem styleClass="s-catagories" value="Cakes" url="" />
 							<p:menuitem value="Donuts" url="" />
 							<p:menuitem value="Cupakes" url="" />
 							<p:menuitem value="Muffins" url="" />
@@ -38,8 +40,37 @@
 						<p:menuitem value="Location" styleClass="s-logoutButton" action="#{Session.endSession}" />
 						<p:menuitem value="Order Now" styleClass="s-logoutButton" action="#{Session.endSession}" />
 						<p:menuitem value="Logout" styleClass="s-logoutButton" action="#{Session.endSession}" />
+				
 					</p:menubar>
-				</h:form>
+					 -->
+					 <h:form>
+					 <p:menubar styleClass="menubar">
+						<p:menuitem value="Home" url="home.xhtml" />
+						<p:submenu id="categoriesMenu" label="Catalogue">
+						<c:forEach items="#{selectedCategory.categoryItems}" var="c">
+            				<p:menuitem value="#{c.category_name}" update="categoriesMenu">
+                		<f:setPropertyActionListener target="" value="" />
+            			</p:menuitem>
+        				</c:forEach>
+        				</p:submenu>
+        				<p:submenu id="recipesMenu" label="Recipes">
+						<c:forEach items="#{selectedCategory.categoryItems}" var="c">
+            				<p:menuitem value="#{c.category_name}" update="recipesMenu">
+                		<f:setPropertyActionListener target="" value="" />
+            			</p:menuitem>
+        				</c:forEach>
+        				</p:submenu>
+        				<p:menuitem value="About Us" styleClass="s-logoutButton" action="#{Session.endSession}" />
+						<p:menuitem value="Location" styleClass="s-logoutButton" action="#{Session.endSession}" />
+						<p:menuitem value="Order Now" styleClass="s-logoutButton" action="#{Session.endSession}" />
+						<p:menuitem value="Logout" styleClass="s-logoutButton" action="#{Session.endSession}" />
+				
+					</p:menubar>
+					</h:form>
+					
+            		
+				
+				
 			</div>
 				
 				
