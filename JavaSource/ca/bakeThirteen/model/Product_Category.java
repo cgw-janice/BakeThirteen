@@ -1,13 +1,12 @@
 package ca.bakeThirteen.model;
 
 import java.io.Serializable;
-import java.util.Collection;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -19,11 +18,13 @@ public class Product_Category implements Serializable{
     @Column(name="prod_cat_id")
     private int prod_cat_id;
 
-    @OneToOne
+    @Id
+    @ManyToOne
     @JoinColumn(name="product_id")
     private Product product;
     
-    @OneToOne
+    @Id
+    @ManyToOne
     @JoinColumn(name="category_id")
     private Category category;
 

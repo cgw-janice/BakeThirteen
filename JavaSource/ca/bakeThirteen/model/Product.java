@@ -2,10 +2,13 @@ package ca.bakeThirteen.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Collection;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -27,16 +30,23 @@ private static final long serialVersionUID = 1L;
     @Column(name="product_price", precision=2, scale=11)
     private BigDecimal product_price;
 
+    @OneToMany(mappedBy = "product")
+    private Collection <Product_Category> product_categories;
     
     public Product() {
+        product_categories = new ArrayList<Product_Category>();
     }
 
-    public Product(int product_id, String product_name, String product_description, BigDecimal product_price) {
+   
+    public Product(int product_id, String product_name, String product_description, BigDecimal product_price,
+        Collection<Product_Category> product_categories) {
         this.product_id = product_id;
         this.product_name = product_name;
         this.product_description = product_description;
         this.product_price = product_price;
+        this.product_categories = product_categories;
     }
+
 
     /**
      * @return the product_id
@@ -92,6 +102,22 @@ private static final long serialVersionUID = 1L;
      */
     public void setProduct_price(BigDecimal product_price) {
         this.product_price = product_price;
+    }
+
+
+    /**
+     * @return the product_categories
+     */
+    public Collection<Product_Category> getProduct_categories() {
+        return product_categories;
+    }
+
+
+    /**
+     * @param product_categories the product_categories to set
+     */
+    public void setProduct_categories(Collection<Product_Category> product_categories) {
+        this.product_categories = product_categories;
     }
     
     
