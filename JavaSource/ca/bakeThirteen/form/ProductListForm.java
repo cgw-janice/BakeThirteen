@@ -69,7 +69,7 @@ public class ProductListForm implements Serializable {
     
      private void refreshList() {
          
-         Product[] products = productManager.getAll();
+         Product[] products = productManager.getByCategory();
          //  System.out.println(selectedCategory.getCategoryID());
          
          list = new ArrayList<EditableProduct>();

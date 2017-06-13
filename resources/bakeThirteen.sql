@@ -108,4 +108,5 @@ CREATE TABLE products_categories (
 INSERT INTO products_categories (product_id, category_id) VALUES
     (1,6),
 	(1,7),
-	(2,3);
+	(2,3),
+	(3,7);

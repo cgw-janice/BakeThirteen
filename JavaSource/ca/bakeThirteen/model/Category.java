@@ -28,10 +28,18 @@ public class Category implements Serializable {
     }
 
   
-   public int getCategory_id() {
+
+
+    /**
+     * @return the category_id
+     */
+    public int getCategory_id() {
         return category_id;
     }
 
+    /**
+     * @param category_id the category_id to set
+     */
     public void setCategory_id(int category_id) {
         this.category_id = category_id;
     }

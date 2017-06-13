@@ -79,4 +79,22 @@ public class ProductManager implements Serializable {
         }
         return prodarray;
     }
+    
+    
+    public Product[] getByCategory(int cat_id) {
+        
+        cat_id = 7;
+       
+        TypedQuery<Product> query = em.createQuery("SELECT DISTINCT p FROM Product p "
+                + "                                 INNER JOIN p.product_categories pc "
+                + "                                 WHERE pc.category.category_id = :cat", Product.class);
+        query.setParameter("cat", cat_id);
+        java.util.List<Product> products = query.getResultList();
+        Product[] prodarray = new Product[products.size()];
+        for (int i=0; i < prodarray.length; i++) {
+            prodarray[i] = products.get(i);
+        }
+        return prodarray;
+    }
+    
 }
