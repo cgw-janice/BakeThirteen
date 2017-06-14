@@ -6,11 +6,11 @@ import java.util.List;
 
 import javax.enterprise.context.Conversation;
 import javax.enterprise.context.ConversationScoped;
-import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 import ca.bakeThirteen.EditableProduct;
+import ca.bakeThirteen.SelectedCategory;
 import ca.bakeThirteen.access.ProductManager;
 import ca.bakeThirteen.model.Product;
 
@@ -27,22 +27,16 @@ import ca.bakeThirteen.model.Product;
 public class ProductListForm implements Serializable {
      
      /** selected category for product list.*/
-     //@Inject private SelectedCategory selectedCategory;
+     @Inject private SelectedCategory selectedCategory;
      
      /** Manager from Product objects.*/
      @Inject private ProductManager productManager;
      
+  
      @Inject Conversation conversation;
      
      List<EditableProduct> list;
      
-     public void initConversation(){
-         if(!FacesContext.getCurrentInstance().isPostback() && conversation.isTransient()){
-             conversation.begin();
-             
-         }
-         
-     }
      
      /**
       * Returns array of EditableProducts that match the selected category.
@@ -54,23 +48,22 @@ public class ProductListForm implements Serializable {
          }
          return list;
      }
-    /**
+    
+     /**
     private void refreshList() {
         Product[] products = productManager.getAll();
         //  System.out.println(selectedCategory.getCategoryID());
         list = new ArrayList<EditableProduct>();
         for (int i = 0; i < products.length; i++) {
             list.add(new EditableProduct(products[i]));
-        }
-        
-  
+        }  
     }
     **/
     
      private void refreshList() {
          
-         Product[] products = productManager.getByCategory();
-         //  System.out.println(selectedCategory.getCategoryID());
+         Product[] products = productManager.getByCategory(selectedCategory.getCategoryID());
+         //System.out.println(selectedCategory.getCategoryID());
          
          list = new ArrayList<EditableProduct>();
          

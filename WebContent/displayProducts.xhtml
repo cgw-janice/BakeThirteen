@@ -55,6 +55,14 @@
 				<h:outputText value="#{p.product.product_price}"
 					rendered="#{not p.editable}" />
 			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="#{msgs.productDeleteColumn}"
+						style="font-weight: bold" />
+				</f:facet>
+				<h:commandButton value="#{msgs.productDeleteColumn}"
+					action="#{productListForm.deleteRow(p)}" />
+			</h:column>
 			
 		</h:dataTable>
 		<br/>

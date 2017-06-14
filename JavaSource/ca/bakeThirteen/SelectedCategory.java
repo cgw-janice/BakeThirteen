@@ -35,7 +35,7 @@ public class SelectedCategory  implements Serializable{
     public String action() {
         //start conversation to handle products for one category
         conversation.begin();
-        return "";
+        return "displayProducts";
     }
 
     /**

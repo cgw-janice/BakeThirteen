@@ -83,8 +83,6 @@ public class ProductManager implements Serializable {
     
     public Product[] getByCategory(int cat_id) {
         
-        cat_id = 7;
-       
         TypedQuery<Product> query = em.createQuery("SELECT DISTINCT p FROM Product p "
                 + "                                 INNER JOIN p.product_categories pc "
                 + "                                 WHERE pc.category.category_id = :cat", Product.class);
